@@ -3,6 +3,7 @@
 import pygame
 import sys
 from random import randint
+from math import sqrt
 
 # pygame init -------------------------------------------------------------------------------------
 # window dimentions
@@ -11,6 +12,12 @@ root = pygame.display.set_mode(dis)
 
 clock = pygame.time.Clock()
 FPS = 60
+
+# useful functions ----------------------------------------------------------------
+
+# distance function
+def dist(pnt1,pnt2):
+    return sqrt((pnt1[0]-pnt2[0])**2+(pnt1[1]-pnt2[1])**2)
 
 # colours (english is best) -----------------------------------------------------------------------
 
@@ -111,11 +118,14 @@ def main(args):
 
         else:
             # the actual algorithm!! --------------------------------------------------------------
-            open_nodes = [start.copy()]
+            open_nodes = [[start.copy(),None]]
             closed_nodes = []
 
-            for node in open_nodes:
-                pass
+            minf = None
+            minfCords = None
+            for node,parent in open_nodes:
+                if minf == None:
+                    minf = 
 
         # clear window
         root.fill(bgColour)
