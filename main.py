@@ -125,7 +125,7 @@ def main(args):
             minfCords = None
             for node,parent in open_nodes:
                 if minf == None:
-                    minf = 
+                    pass
 
         # clear window
         root.fill(bgColour)
